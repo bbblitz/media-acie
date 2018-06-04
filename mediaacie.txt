@@ -1,0 +1,8 @@
+"mediaacie"
+{
+	"base"			"sandbox"
+	"title"			"Media Acie"
+	"maps"			"^*"
+	"menusystem"	"1"
+	"author_name"	"Apickx"
+}
