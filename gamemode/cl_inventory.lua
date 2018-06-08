@@ -1,33 +1,15 @@
---[[
-	Minimaps should display:
-	Overhead view
-	Friendlies
-	Markers
-	Known enemies
-]]
 
-local d = include("cl_ui_distances.lua")
-local c = include("cl_ui_colors.lua")
-local s = GM.cl_state
+local draw_inventory = false
 
-local minimap = Material("ui/minimap.png")
+hook.Add("SpawnMenuOpen","toggle_inventory",function()
+	draw_inventory = not draw_inventory
+end)
 
-local scrw = ScrW()
-local scrh = ScrH()
+net.Receive("add_item",function()
 
-local display = {
-	npc_zombie = {
-		Material("ui/minimap_zombie.png"),
-		d.minimap_zombie_width,
-		d.minimap_zombie_height,
-		d.minimap_zombie_abswidth,
-		d.minimap_zombie_absheight,
-	}
-}
+end)
 
-local minimap_range = 1000
-local minimap_radius = (d.minimap_radius) / 2
-hook.Add("HUDPaint","draw_minimap",function(name)
+hook.Add("HUDPaint","draw_inventory",function(name)
 	surface.SetDrawColor( 255, 255, 255, 255 )
 	if s.iscommander then return end
 	local mmx = scrw - d.ui_padding - d.minimap_width

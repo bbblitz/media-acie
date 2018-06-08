@@ -40,6 +40,16 @@ local ret = {
 	capture_vial_bar_width=8,
 	capture_vial_bar_heigth=14,
 	
+	common_padding = 32,
+	
+	charsel_icon_width = 128,
+	charsel_icon_g_width = 128,
+	charsel_icon_height = 256,
+	charsel_icon_g_height = 192,
+	charsel_button_height = 64,
+	charsel_button_width = 128,
+	charsel_button_g_width = 128,
+	charsel_button_g_height = 24,
 }
 
 for k,v in pairs(ret) do

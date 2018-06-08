@@ -1,10 +1,10 @@
 --[[
 	Movement code
 ]]
-
+do return end
 local iscommander
 if CLIENT then
-	local s = include("cl_state.lua")
+	local s = GM.cl_state
 	iscommander = s.iscommander
 else
 	iscommander = false

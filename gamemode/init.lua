@@ -7,8 +7,16 @@ AddCSLuaFile("sh_movement.lua")
 AddCSLuaFile("cl_minimap.lua")
 AddCSLuaFile("cl_ui_colors.lua")
 AddCSLuaFile("cl_state.lua")
-include("shared.lua")
+AddCSLuaFile("cl_weapon_display.lua")
+AddCSLuaFile("fun.lua")
+AddCSLuaFile("sh_registry.lua")
+AddCSLuaFile("sh_weapon_ar.lua")
+AddCSLuaFile("sh_weapons.lua")
+AddCSLuaFile("cl_createchar.lua")
 
+include("shared.lua")
+include("sv_weapontrack.lua")
+include("sv_inventory.lua")
 --Profile bar things
 for _,sides in pairs({"mid","start"}) do
 	for _,colors in pairs({"blue","red","empty"}) do

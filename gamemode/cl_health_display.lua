@@ -1,5 +1,5 @@
 local d = include("cl_ui_distances.lua")
-local s = include("cl_state.lua")
+local s = GM.cl_state
 
 print("Hello from ui health display")
 hook.Add("HUDShouldDraw","hide_health",function(name)
